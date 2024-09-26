@@ -1,17 +1,11 @@
-export default function Page({ setCurrentPage }) {
+export default function Page({ setCurrentPage, index }) {
   return (
     <>
-      <div className="join">
-        <button className="join-item btn" onClick={() => setCurrentPage(1)}>
-          1
-        </button>
-        <button
-          className="join-item btn btn-active"
-          onClick={() => setCurrentPage(2)}>
-          2
-        </button>
-      </div>
-      ;
+      <button
+        className="join-item btn "
+        onClick={() => setCurrentPage(index + 1)}>
+        {index + 1}
+      </button>
     </>
   );
 }
