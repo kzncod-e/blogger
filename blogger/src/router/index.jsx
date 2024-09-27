@@ -1,10 +1,12 @@
 import { createBrowserRouter, redirect } from "react-router-dom";
 import Home from "../views/Home";
 import Login from "../views/Login";
-import Form from "../components/Form";
+import Add from "../views/Addform";
 import BaseLayeout from "../views/BaseLayeout";
-const url = "https://h8-phase2-gc.vercel.app";
-import Toastify from "toastify-js";
+import Edit from "../views/EditForm";
+const url = "https://phase2-aio.vercel.app";
+
+import Categories from "../components/Catagories";
 const router = createBrowserRouter([
   {
     path: "/login",
@@ -31,7 +33,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/add",
-        element: <Form url={url} />,
+        element: <Add url={url} />,
+      },
+      {
+        path: "/edit/:id",
+        element: <Edit url={url} />,
+      },
+      {
+        path: "/categories",
+        element: <Categories url={url} />,
       },
     ],
   },

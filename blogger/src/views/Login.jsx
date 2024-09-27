@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Toastify from "toastify-js";
@@ -33,6 +33,22 @@ const Login = ({ url }) => {
       }).showToast();
     } catch (error) {
       console.log(error);
+
+      // Toastify({
+      //   text: error.response.data.error,
+      //   duration: 2000,
+      //   newWindow: true,
+      //   close: true,
+      //   gravity: "bottom",
+      //   position: "right",
+      //   stopOnFocus: true,
+      //   style: {
+      //     background: "#00B29F",
+      //     color: "#17202A",
+      //     boxShadow: "0 5px 10px black",
+      //     fontWeight: "bold",
+      //   },
+      // }).showToast();
     }
   }
 

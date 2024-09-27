@@ -21,13 +21,13 @@ export default function Nav() {
             </li>
             <li>
               <details>
-                <summary>Parent</summary>
-                <ul className="bg-base-100 rounded-t-none p-2">
-                  <li>
+                <summary>list</summary>
+                <ul className="bg-base-100 rounded-t-none w-fit ">
+                  <li className="w-80">
                     <Link to="/add">add new blog</Link>
                   </li>
                   <li>
-                    <a>Link 2</a>
+                    <Link to="/categories">Categories</Link>
                   </li>
                 </ul>
               </details>

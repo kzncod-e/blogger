@@ -29,7 +29,7 @@ export default function Home({ url }) {
   return (
     <>
       <div className="pt-20">
-        <Card posts={posts} />
+        <Card posts={posts} url={url} fetchPost={fetchPost} />
         {/* <Login /> */}
       </div>
     </>
