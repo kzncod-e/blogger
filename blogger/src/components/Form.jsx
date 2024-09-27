@@ -15,7 +15,7 @@ export default function Form({ url, handleSubmit, product }) {
           Authorization: `Bearer ${localStorage.token}`,
         },
       });
-      console.log(data.data);
+      // console.log(data.data);
       setCategories(data.data);
     } catch (error) {
       console.log(error);
@@ -27,10 +27,10 @@ export default function Form({ url, handleSubmit, product }) {
   }, []);
   useEffect(() => {
     if (product) {
-      setTitle(product.title);
-      setContent(product.content);
-      setImgUrl(product.imgUrl);
-      setCategoryId(product.setCategoryId);
+      setTitle(product.title || "");
+      setContent(product.content || "");
+      setImgUrl(product.imgUrl || "");
+      setCategoryId(product.categoryId || 0);
     }
   }, [product]);
 
@@ -96,7 +96,7 @@ export default function Form({ url, handleSubmit, product }) {
               id="underline_select"
               className="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer"
               onChange={(e) => setCategoryId(e.target.value)}>
-              <option selected>choose categories</option>
+              <option defaultValue={"choose catagories"}></option>
               {categories.map((el) => (
                 <option
                   className="bg-base-300 border-none"

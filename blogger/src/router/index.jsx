@@ -4,7 +4,7 @@ import Login from "../views/Login";
 import Add from "../views/Addform";
 import BaseLayeout from "../views/BaseLayeout";
 import Edit from "../views/EditForm";
-const url = "https://phase2-aio.vercel.app";
+const url = "https://h8-phase2-gc.vercel.app";
 
 import Categories from "../components/Catagories";
 const router = createBrowserRouter([

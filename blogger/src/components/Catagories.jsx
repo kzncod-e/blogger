@@ -11,7 +11,7 @@ export default function Categories({ url }) {
         },
       });
       setCategories(data.data);
-      console.log(data.data);
+      //   console.log(data.data);
 
       console.log("success read categories");
     } catch (error) {
@@ -30,9 +30,9 @@ export default function Categories({ url }) {
           <thead>
             <tr>
               <th>id</th>
-              <th>titke</th>
-              <th>content</th>
-              <th>imgUrl</th>
+              <th>name</th>
+              <th>updatedAt</th>
+              <th>createdAt</th>
             </tr>
           </thead>
           <tbody>
