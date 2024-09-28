@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Toastify from "toastify-js";
 import { useState } from "react";
+import Button from "./Button";
 export default function Card({ url, posts, fetchPost }) {
   const [file, setFile] = useState({});
   const navigate = useNavigate();
@@ -124,9 +125,11 @@ export default function Card({ url, posts, fetchPost }) {
                     onClick={() => navigate(`/edit/${el.id}`)}>
                     Edit
                   </button>
-                  <button className="btn" onClick={() => handleDelete(el.id)}>
-                    Delete
-                  </button>
+                  <Button
+                    handleClick={handleDelete}
+                    id={el.id}
+                    propName="Delete"
+                  />
                   <div className="flex flex-col items-center">
                     <label className="cursor-pointer bg-base-300 text-gray-700 px-4 py-2 rounded-md flex justify-center items-center w-full max-w-xs">
                       {file[el.id] ? file[el.id].name : "Choose File"}
